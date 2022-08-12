@@ -23,5 +23,8 @@
   "homepage": "https://github.com/ThomasRettig/hope-hub#readme",
   "devDependencies": {
     "eslint": "^8.21.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.2.0"
   }
 }
