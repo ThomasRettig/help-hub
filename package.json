@@ -1,0 +1,24 @@
+{
+  "name": "hope-hub",
+  "version": "1.0.0",
+  "description": "Mental health bot which detects suicidal ideation in Discord messages",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasRettig/hope-hub.git"
+  },
+  "keywords": [
+    "mental-health",
+    "chatbot",
+    "discord"
+  ],
+  "author": "Thomas Rettig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasRettig/hope-hub/issues"
+  },
+  "homepage": "https://github.com/ThomasRettig/hope-hub#readme"
+}
