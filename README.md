@@ -1,4 +1,4 @@
-# help-hub
+# HelpHub
 
 HelpHub is a Discord bot which detects indicators of possible suicidal ideation in messages by matching them to our database of suicidal words.
 
