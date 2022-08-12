@@ -4,7 +4,7 @@
   "description": "Mental health bot which detects suicidal ideation in Discord messages",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "lint": "eslint index.js --fix",
     "start": "node index.js"
   },
   "repository": {
