@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ThomasRettig/hope-hub/issues"
   },
-  "homepage": "https://github.com/ThomasRettig/hope-hub#readme"
+  "homepage": "https://github.com/ThomasRettig/hope-hub#readme",
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  }
 }
