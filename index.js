@@ -13,6 +13,6 @@ client.once('ready', () => {
 client.login(token);
 
 // message
-client.on("message", function(message){
-    console.log(`message has been created -> ${message}`);
+client.on('messageCreate', () => {
+	console.log("Lmao");
 });
