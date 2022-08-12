@@ -14,5 +14,5 @@ client.login(token);
 
 // message
 client.on('messageCreate', () => {
-	console.log("Lmao!");
+	console.log("Lmao");
 });
