@@ -9,7 +9,7 @@ const randomSign = [
 	"**It seems like you are showing signs of suicidal ideation**",
 	"**It looks like you’re suffering from depression**",
 	"**It looks like you’re going through some tough times**",
-	"**You seem to be showing suicidal thoughts**",
+	"**You seem to be having suicidal thoughts**",
 	"**It seems like you are showing some suicidal thoughts**",
 ];
 
