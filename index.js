@@ -5,6 +5,13 @@ const { triggers } = require("./blacklist.json");
 
 
 // random messages
+const randomGreeting = [
+	"Hey",
+	"Howdy",
+	"Hi",
+	"Hello",
+];
+
 const randomSign = [
 	"**It seems like you are showing signs of suicidal ideation**",
 	"**It looks like you’re suffering from depression**",
@@ -17,9 +24,9 @@ const randomComfort = [
 	"I want to let you know that you’re not alone",
 	"I’m really sorry that you’re going through all of this — I really understand how hard it can be",
 	"I can imagine how tough life must be right now",
-	"I know that life can be really difficult at times",
+	"I know that life can be really difficult at times… But don’t fret — I’m here to help",
 	"I really understand how you’re feeling right now… Don’t worry — we’re in this together",
-	"I want you to know that there is light at the end of the tunnel",
+	"I want you to know that there is light at the end of the tunnel — not all is lost",
 ];
 
 // set up
@@ -70,11 +77,12 @@ client.on("messageCreate", async (message) => {
 		message.content.includes(triggers[35]) ||
 		message.content.includes(triggers[36])
 	) {
-		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)]; // random comfort message
-		let sign = randomSign[Math.floor(Math.random() * randomSign.length)]; // random sign message
-		let messageAuthor = message.author.toString(); // get username of sender
+		let greeting = randomGreeting[Math.floor(Math.random() * randomGreeting.length)];
+		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)];
+		let sign = randomSign[Math.floor(Math.random() * randomSign.length)];
+		let messageAuthor = message.author.toString();
 
-		message.reply(`Hey ${messageAuthor} 👋\n${sign}. ${comfort}.`);
+		message.reply(`${greeting} ${messageAuthor} 👋\n${sign}. ${comfort}.`);
 		const hotlineEmbed = new EmbedBuilder()
 			.setTitle("Help is available.")
 			.setDescription("Call 1-767 to speak to someone today.")
