@@ -30,7 +30,7 @@ client.login(token);
 
 // set up
 client.on("ready", async () => {
-	console.log(`Logged in as ${client.user.tag}!`);
+	console.log("Logged in as", "\x1b[32m", `${client.user.tag}!`, "\x1b[0m");
 });
 
 // main code
