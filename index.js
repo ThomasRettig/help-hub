@@ -1,7 +1,9 @@
 const { Client, EmbedBuilder } = require("discord.js");
 const client = new Client({ intents: ["Guilds", "GuildMessages", "MessageContent"] });
-const { token } = require("./config.json");
 const { triggers } = require("./blacklist.json");
+const dotenv = require("dotenv");
+dotenv.config();
+const token = process.env.token;
 
 // random messages
 const randomGreeting = [
