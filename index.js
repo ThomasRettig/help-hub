@@ -101,7 +101,9 @@ client.on("messageCreate", async (message) => {
 		message.content.includes(triggers[61]) ||
 		message.content.includes(triggers[62]) ||
 		message.content.includes(triggers[63]) ||
-		message.content.includes(triggers[64])
+		message.content.includes(triggers[64]) ||
+		message.content.includes(triggers[65]) ||
+		message.content.includes(triggers[66])
 	) {
 		let greeting = randomGreeting[Math.floor(Math.random() * randomGreeting.length)];
 		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)];
