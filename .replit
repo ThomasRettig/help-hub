@@ -1,4 +1,4 @@
-run = "./repl.deploy npm run start"
+run = "./repl.deploy --standalone npm run start"
 
 [nix]
 channel = "stable-21_11"
