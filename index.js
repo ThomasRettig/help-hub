@@ -11,28 +11,22 @@ const token = process.env.token;
 const http = require("http");
 
 // random messages
-const randomGreeting = [
-	"Hey",
-	"Howdy",
-	"Hi",
-	"Hello",
-];
+const randomGreeting = ["Hey", "Howdy", "Hey there", "Hi", "Hello"];
 
 const randomSign = [
 	"It seems like you are showing signs of suicidal ideation",
 	"It looks like you’re suffering from depression",
 	"It looks like you’re going through some tough times",
 	"You seem to be having suicidal thoughts",
-	"It seems like you are showing some suicidal thoughts",
+	"It seems like you are showing some suicidal thoughts"
 ];
 
 const randomComfort = [
 	"I want to let you know that you’re not alone",
 	"I’m really sorry that you’re going through all of this — I really understand how hard it can be",
-	"I can imagine how tough life must be right now",
 	"I know that life can be really difficult at times… But don’t fret — I’m here to help",
 	"I really understand how you’re feeling right now… Don’t worry — we’re in this together",
-	"I want you to know that there is light at the end of the tunnel — not all is lost",
+	"I want you to know that there is light at the end of the tunnel — not all is lost"
 ];
 
 client.login(token);
