@@ -7,9 +7,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 const token = process.env.token;
 
-// http server for uptime monitoring
-const http = require("http");
-
 // random messages
 const randomGreeting = ["Hey", "Howdy", "Hey there", "Hi", "Hello"];
 
@@ -122,4 +119,3 @@ client.on("messageCreate", async (message) => {
 		message.channel.send({ embeds: [hotlineEmbed] }); // send hotline embed
 	}
 });
-
