@@ -1,10 +1,4 @@
-
-hidden = [".config"]
 run = "npm run start"
-
-[[hints]]
-regex = "Error \\[ERR_REQUIRE_ESM\\]"
-message = "We see that you are using require(...) inside your code. We currently do not support this syntax. Please use 'import' instead when using external modules. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)"
 
 [nix]
 channel = "stable-21_11"
@@ -15,7 +9,7 @@ PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_S
 npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
 
 [gitHubImport]
-requiredFiles = [".replit", "replit.nix", ".config"]
+requiredFiles = [".replit", "replit.nix"]
 
 [packager]
 language = "nodejs"
@@ -62,7 +56,7 @@ support = true
     command = "launch"
     type = "request"
     
-      [debugger.interactive.launchMessage.arguments]  
+      [debugger.interactive.launchMessage.arguments]
       args = []
       console = "externalTerminal"
       cwd = "."
