@@ -123,7 +123,3 @@ client.on("messageCreate", async (message) => {
 	}
 });
 
-// create http server
-http.createServer((req, res) => {
-	res.end("HopeHub is alive!");
-}).listen(3000);
