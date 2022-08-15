@@ -34,6 +34,8 @@ const randomComfort = [
 	"I want you to know that there is light at the end of the tunnel — not all is lost",
 ];
 
+client.login(token);
+
 // set up
 client.on("ready", async () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -79,7 +81,16 @@ client.on("messageCreate", async (message) => {
 		message.content.includes(triggers[33]) ||
 		message.content.includes(triggers[34]) ||
 		message.content.includes(triggers[35]) ||
-		message.content.includes(triggers[36])
+		message.content.includes(triggers[36]) ||
+		message.content.includes(triggers[37]) ||
+		message.content.includes(triggers[38]) ||
+		message.content.includes(triggers[39]) ||
+		message.content.includes(triggers[40]) ||
+		message.content.includes(triggers[41]) ||
+		message.content.includes(triggers[42]) ||
+		message.content.includes(triggers[43]) ||
+		message.content.includes(triggers[44]) ||
+		message.content.includes(triggers[45])
 	) {
 		let greeting = randomGreeting[Math.floor(Math.random() * randomGreeting.length)];
 		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)];
@@ -97,8 +108,6 @@ client.on("messageCreate", async (message) => {
 		message.channel.send({ embeds: [hotlineEmbed] }); // send hotline embed
 	}
 });
-
-client.login(token);
 
 // create http server
 http.createServer( (req, res) => {
