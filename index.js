@@ -1,9 +1,13 @@
 const { Client, EmbedBuilder } = require("discord.js");
 const client = new Client({ intents: ["Guilds", "GuildMessages", "MessageContent"] });
-const { triggers } = require("./blacklist.json");
+const { triggers } = require("./blacklist.json"); // import trigger words
+
+// configure environment secrets
 const dotenv = require("dotenv");
 dotenv.config();
 const token = process.env.token;
+
+const http = require("http"); // http server for uptime monitoring
 
 // random messages
 const randomGreeting = [
@@ -83,18 +87,20 @@ client.on("messageCreate", async (message) => {
 		let messageAuthor = message.author.toString();
 
 		message.reply(`${greeting} ${messageAuthor} 👋\n**${sign}**. ${comfort}.`);
+
 		const hotlineEmbed = new EmbedBuilder()
 			.setTitle("Help is available.")
 			.setDescription("Call 1-767 to speak to someone today.")
 			.setImage("https://i.imgur.com/Zs8E4sp.png")
 			.setFooter({ text: "We’re in this together 💪" });
 
-		message.channel.send({ embeds: [hotlineEmbed] });
+		message.channel.send({ embeds: [hotlineEmbed] }); // send hotline embed
 	}
 });
 
 client.login(token);
 
-require("http")
-	.createServer((req, res) => res.end("Bot is alive!"))
-	.listen(3000);
+// create http server
+http.createServer( (req, res) => {
+	res.end("HopeHub is alive!");
+}).listen(3000);
