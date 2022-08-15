@@ -1,13 +1,14 @@
 const { Client, EmbedBuilder } = require("discord.js");
-const client = new Client({ intents: ["Guilds", "GuildMessages", "MessageContent"] });
-const { triggers } = require("./blacklist.json"); // import trigger words
+const client = new Client({ intents: ["Guilds", "GuildMessages", "MessageContent"] }); // establish client intents
+const { triggers } = require("./blacklist.json"); // import suicidal trigger words
 
-// configure environment secrets
+// get environment secrets
 const dotenv = require("dotenv");
 dotenv.config();
 const token = process.env.token;
 
-const http = require("http"); // http server for uptime monitoring
+// http server for uptime monitoring
+const http = require("http");
 
 // random messages
 const randomGreeting = [
@@ -43,7 +44,7 @@ client.on("ready", async () => {
 
 // main code
 client.on("messageCreate", async (message) => {
-	if (message.author.bot) return false;
+	if (message.author.bot) return false; // prevent bot from scanning its own messages and declaring false positive
 	if (
 		message.content.includes(triggers[0]) ||
 		message.content.includes(triggers[1]) ||
@@ -90,7 +91,26 @@ client.on("messageCreate", async (message) => {
 		message.content.includes(triggers[42]) ||
 		message.content.includes(triggers[43]) ||
 		message.content.includes(triggers[44]) ||
-		message.content.includes(triggers[45])
+		message.content.includes(triggers[45]) ||
+		message.content.includes(triggers[46]) ||
+		message.content.includes(triggers[47]) ||
+		message.content.includes(triggers[48]) ||
+		message.content.includes(triggers[49]) ||
+		message.content.includes(triggers[50]) ||
+		message.content.includes(triggers[51]) ||
+		message.content.includes(triggers[52]) ||
+		message.content.includes(triggers[53]) ||
+		message.content.includes(triggers[54]) ||
+		message.content.includes(triggers[55]) ||
+		message.content.includes(triggers[56]) ||
+		message.content.includes(triggers[57]) ||
+		message.content.includes(triggers[58]) ||
+		message.content.includes(triggers[59]) ||
+		message.content.includes(triggers[60]) ||
+		message.content.includes(triggers[61]) ||
+		message.content.includes(triggers[62]) ||
+		message.content.includes(triggers[63]) ||
+		message.content.includes(triggers[64])
 	) {
 		let greeting = randomGreeting[Math.floor(Math.random() * randomGreeting.length)];
 		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)];
