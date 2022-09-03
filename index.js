@@ -10,14 +10,6 @@ const token = process.env.token;
 // random messages
 const randomGreeting = ["Hey", "Howdy", "Hey there", "Hi", "Hello"];
 
-const randomSign = [
-	"It seems like you are showing signs of suicidal ideation",
-	"It looks like you’re suffering from depression",
-	"It looks like you’re going through some tough times",
-	"You seem to be having suicidal thoughts",
-	"It seems like you are showing some suicidal thoughts"
-];
-
 const randomComfort = [
 	"I want to let you know that you’re not alone",
 	"I’m really sorry that you’re going through all of this — I really understand how hard it can be",
@@ -107,7 +99,7 @@ client.on("messageCreate", async (message) => {
 	) {
 		let greeting = randomGreeting[Math.floor(Math.random() * randomGreeting.length)];
 		let comfort = randomComfort[Math.floor(Math.random() * randomComfort.length)];
-		let sign = randomSign[Math.floor(Math.random() * randomSign.length)];
+		let sign = "It looks like you’re going through depression";
 		let messageAuthor = message.author.toString();
 
 		message.reply(`${greeting} ${messageAuthor} 👋\n**${sign}**. ${comfort}.`);
